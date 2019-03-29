@@ -64,7 +64,7 @@
 		</div>
 	</nav>
 
-	<div class="container">
+	<div class="container-fluid">
 		<div class="row">
 			<div class="col-lg-12">
 			  	Estos son los resultados encontrados
@@ -95,11 +95,28 @@
 
 
 	<script>
+
+		var negocio = {
+			nombre: '',
+			imagenPrincipal: 'farmacia.jpg',
+			direccion: 'Av. Blanco Galindo y Av. Aegunda',
+			telefonos: '4584042-4566124',
+			celulares: '70605549-69012456',
+			enlace: 'www.google.com',
+		};
+
+		var contenidoHtml = '';
+		contenidoHtml += '<div><b><u>Farmacia:</u> '+negocio.nombre+'</b></div>';
+		contenidoHtml += '<div><img src="<?php echo base_url() ?>assets/images/'+negocio.imagenPrincipal+'" width="100%" height="60" /></div>';
+		contenidoHtml += '<div><b><u>Dir:</u></b> '+negocio.direccion+'</div>';
+		contenidoHtml += '<div><b><u>Telf:</u></b> '+negocio.telefonos+'</div>';
+		contenidoHtml += '<div><b><u>Cel:</u></b> '+negocio.celulares+'</div>';
+		contenidoHtml += '<div><b><u><a href="'+negocio.enlace+'">Ver Mas..</a></u></b></div>';
 		var data = [
 			{
 				lat:-17.39489,
 				lng:-66.16001,
-				text: "<div><span>Esto es un nuevo contenido</span></div>",
+				text: contenidoHtml,
 			},
 			{
 				lat:-16.39489,
@@ -120,7 +137,7 @@
 
 		$.each(data, function(index, val) {
 			markerArray.push(L.marker([val.lat, val.lng]).addTo(mymap));	
-			markerArray[markerArray.length-1].bindPopup(val.text, {closeOnClick: false, autoClose: false});
+			markerArray[markerArray.length-1].bindPopup(val.text, {closeOnClick: false, autoClose: false}).openPopup();
 		});
 
 
