@@ -1,25 +1,23 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Guia de Negocios</title>
-  <base href="/">
+  	<meta charset="utf-8">
+  	<title>Guia de Negocios</title>
+  	<base href="/">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
-   integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="icon" type="image/x-icon" href="favicon.ico">
+  	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
    crossorigin=""/>
-   <style>
+   	<style>
    	#mapid { height: 580px; }
-   </style>
-	<script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"
-   integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA=="
+   	</style>
+	<script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js" integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA=="
    crossorigin=""></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript" ></script>
-  <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/bootstrap/css/bootstrap-new.min.css">
-  <script src="<?php echo base_url() ?>/assets/jquery/jquery-3.3.1.min.js" type="text/javascript"></script>
-  <script src="<?php echo base_url() ?>assets/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+ 
+  	<link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/bootstrap/css/bootstrap-new.min.css">
+  	<script src="<?php echo base_url() ?>/assets/jquery/jquery-3.3.1.min.js" type="text/javascript"></script>
+  	<script src="<?php echo base_url() ?>assets/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
 </head>
 <body>
 	
@@ -130,7 +128,7 @@
 		var mymap = L.map('mapid').setView([-17.39489, -66.16001], 8);
 		L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
 		    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-		    maxZoom: 8,
+		    // maxZoom: 8,
 		    id: 'mapbox.streets',
 		    accessToken: 'pk.eyJ1IjoiaHBlcmV6IiwiYSI6ImNqbjI5ajh6aTJpZngzcG5vejRnYjlvMGkifQ.DJOQ29dnnukUR0GNBEBhAA'
 		}).addTo(mymap);
